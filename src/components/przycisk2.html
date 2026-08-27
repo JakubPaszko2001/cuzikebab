@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallelogram Comic Button</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Kontener obsługujący przesunięty cień w stylu komiksu */
+    .comic-btn-wrapper {
+      position: relative;
+      display: inline-block;
+      filter: drop-shadow(6px 8px 0px #000000); /* Czarny komiksowy cień */
+      transition: transform 0.2s ease;
+    }
+
+    .comic-btn-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    /* Przycisk w kształcie ściętego prostokąta (równoległobok) */
+    .comic-button {
+      position: relative;
+      background-color: #ffd600; /* Żółte tło */
+      border: 4px solid #000000; /* Czarny obrys */
+      border-radius: 4px;
+      padding: 16px 45px;
+      cursor: pointer;
+      outline: none;
+      
+      /* Nachylenie boków prostokąta */
+      transform: skewX(-15deg); 
+      display: inline-block;
+    }
+
+    /* Odkręcenie tekstu, aby nie był pochylony */
+    .comic-button span {
+      font-family: 'Bangers', cursive, sans-serif;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      color: #000000;
+      text-transform: uppercase;
+      display: block;
+      user-select: none;
+      line-height: 1;
+      
+      /* Cofnięcie nachylenia dla samego tekstu */
+      transform: skewX(15deg); 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="comic-btn-wrapper">
+    <button class="comic-button">
+      <span>ZOBACZ MENU</span>
+    </button>
+  </div>
+
+</body>
+</html>
