@@ -17,7 +17,7 @@ export default function HeroSection() {
       />
       {/* Postać jako osobna warstwa */}
       <Image
-        src="/postac9.png"
+        src="/postac11.png"
         alt="Postać"
         width={1016}
         height={848}

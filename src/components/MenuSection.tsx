@@ -1,8 +1,5 @@
 
-"use client";
-
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 
 /* Pomocnicze dane kart */
 const cards = [
@@ -51,127 +48,30 @@ const cards = [
 ];
 
 export default function MenuSection() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    const c = canvas;
-    const k = ctx;
-
-    function pseudoRandom(seed: number) {
-      const x = Math.sin(seed++) * 10000;
-      return x - Math.floor(x);
-    }
-
-    function drawComicBackground() {
-      const width = (c.width = window.innerWidth);
-      const height = (c.height = window.innerHeight);
-      const centerX = width / 2;
-      const centerY = height / 2;
-      const maxRadius = Math.hypot(centerX, centerY);
-
-      // 1. TŁO PODSTAWOWE
-      k.fillStyle = "#2d3030";
-      k.fillRect(0, 0, width, height);
-
-      // 2. KROPKI (HALFTONE)
-      const spacing = 18;
-      const maxDotRadius = 8;
-      k.fillStyle = "#000000";
-      for (let x = 0; x < width; x += spacing) {
-        for (let y = 0; y < height; y += spacing) {
-          const dist = Math.hypot(x - centerX, y - centerY);
-          const factor = dist / maxRadius;
-          if (factor < 0.32) continue;
-          const radiusFactor = (factor - 0.32) / 0.68;
-          const radius = Math.pow(radiusFactor, 1.8) * maxDotRadius;
-          if (radius > 0.5) {
-            k.beginPath();
-            k.arc(x, y, radius, 0, Math.PI * 2);
-            k.fill();
-          }
-        }
-      }
-
-      // 3. LINIE PROMIENISTE (SPEED LINES)
-      const numberOfLines = 160;
-      let seed = 42;
-      for (let i = 0; i < numberOfLines; i++) {
-        const angle = (i / numberOfLines) * Math.PI * 2;
-        const rand1 = pseudoRandom(seed++);
-        const rand2 = pseudoRandom(seed++);
-        const rand3 = pseudoRandom(seed++);
-        void rand3;
-        const innerRadius = maxRadius * (0.28 + rand1 * 0.35);
-        const outerRadius = maxRadius * 1.1;
-        const lineWidthAngle = 0.0015 + rand2 * 0.006;
-
-        const x1 = centerX + Math.cos(angle - lineWidthAngle) * outerRadius;
-        const y1 = centerY + Math.sin(angle - lineWidthAngle) * outerRadius;
-        const x2 = centerX + Math.cos(angle + lineWidthAngle) * outerRadius;
-        const y2 = centerY + Math.sin(angle + lineWidthAngle) * outerRadius;
-        const x3 = centerX + Math.cos(angle) * innerRadius;
-        const y3 = centerY + Math.sin(angle) * innerRadius;
-
-        k.beginPath();
-        k.moveTo(x1, y1);
-        k.lineTo(x2, y2);
-        k.lineTo(x3, y3);
-        k.closePath();
-        k.fill();
-      }
-    }
-
-    drawComicBackground();
-    window.addEventListener("resize", drawComicBackground);
-    return () => window.removeEventListener("resize", drawComicBackground);
-  }, []);
-
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-hidden py-14 px-6 md:py-20">
-      {/* Komiksowe tło: speed lines + halftone (canvas) */}
-      <canvas
-        ref={canvasRef}
-        className="pointer-events-none absolute inset-0 h-full w-full"
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-hidden bg-[#222624] py-14 px-6 md:py-20">
+      {/* Tło: bg-menu-2.png (na kolorze #222624) */}
+      <Image
+        src="/bg-menu-3.png"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center"
         aria-hidden="true"
       />
 
-      {/* Obrastające przyciemnienie dla czytelności napisów */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-black/20" />
-
       {/* Nagłówek sekcji */}
       <div className="relative z-[5] mb-12 w-full max-w-6xl text-center md:mb-16">
-        {/* Mniejszy napis — CUZI KEBAB */}
-        <p className="font-sans text-sm font-extrabold uppercase tracking-[0.5em] text-slate-50 sm:text-base">
-          CUZI KEBAB
-        </p>
-
         {/* Główny napis NASZE MENU */}
-        <h2 className="relative mt-2 font-[FontMain] uppercase italic">
-          {/* Warstwa spodnia: gruba czarna obwódka */}
-          <span
-            aria-hidden="true"
-            className="absolute inset-0 text-[#FFD300]"
-            style={{
-              WebkitTextStroke: "10px #000000",
-              color: "transparent",
-            }}
-          >
-            NASZE MENU
-          </span>
-          {/* Warstwa wierzchnia: wypełnienie + podwójne cieniowanie */}
-          <span
-            className="relative block text-[#FFD300] text-5xl sm:text-6xl md:text-7xl"
-            style={{
-              filter: "drop-shadow(4px 4px 0 #000000) drop-shadow(7px 7px 0 rgba(0,0,0,0.5))",
-            }}
-          >
-            NASZE MENU
-          </span>
+        <h2
+          className="relative mt-2 font-[FontMain] uppercase italic text-[#FFD300] text-7xl sm:text-8xl md:text-9xl"
+          style={{
+            WebkitTextStroke: "3px #000000",
+            textShadow: "4px 4px 0 #000000",
+          }}
+        >
+          NASZE MENU
         </h2>
       </div>
 
