@@ -4,25 +4,26 @@ import Image from "next/image";
 /* Pomocnicze dane kart */
 const cards = [
   {
-    title: "CHICKEN GEMÜSE KEBAB",
-    titleClass: "text-black",
-    badge: "BUŁKA",
-    badgeClass: "bg-blue-600 text-white",
+    title1: "Chicken",
+    title2: "Gemüse Kebab",
+    subTag: null,
+    badge: "Bułka",
+    isVege: false,
     img: "/warzywa2.png",
     imgAlt: "Chicken gemüse kebab",
     variants: [
       { name: "SMALL", size: "140 G", price: "34 zł" },
       { name: "REGULAR", size: "180 G", price: "40 zł" },
       { name: "BIG", size: "220 G", price: "46 zł" },
-      { name: "MIĘSO MIESZANE", size: "", price: "+2 zł" },
     ],
-    center: false,
+    extra: "Mięso Mieszane +2 zł",
   },
   {
-    title: "STEAK / BEEF GEMÜSE KEBAB",
-    titleClass: "text-black",
-    badge: "BUŁKA",
-    badgeClass: "bg-blue-600 text-white",
+    title1: "Steak / Beef",
+    title2: "Gemüse Kebab",
+    subTag: null,
+    badge: "Bułka",
+    isVege: false,
     img: "/warzywa5.png",
     imgAlt: "Steak beef gemüse kebab",
     variants: [
@@ -30,22 +31,33 @@ const cards = [
       { name: "REGULAR", size: "180 G", price: "45 zł" },
       { name: "BIG", size: "220 G", price: "53 zł" },
     ],
-    center: true,
+    extra: "",
   },
   {
-    title: "FALAFEL (VEGE)",
-    titleClass: "text-black",
-    badge: "BUŁKA",
-    badgeClass: "bg-emerald-600 text-white",
+    title1: "Falafel",
+    title2: null,
+    subTag: "(VEGE)",
+    badge: "Bułka",
+    isVege: true,
     img: "/warzywa6.png",
     imgAlt: "Falafel vege kebab",
     variants: [
       { name: "SMALL", size: "4 SZT.", price: "32 zł" },
       { name: "REGULAR", size: "5 SZT.", price: "37 zł" },
     ],
-    center: false,
+    extra: "",
   },
 ];
+
+/* Skos dla każdej karty — stały jednolity kąt (wzór z dostarczonego HTML) */
+const clipPaths = [
+  "polygon(0 9%, 100% 7%, 100% 100%, 0 100%)",
+  "polygon(0 7%, 100% 5%, 100% 100%, 0 100%)",
+  "polygon(0 5%, 100% 3%, 100% 100%, 0 100%)",
+];
+
+const SUNBURST_BG =
+  "repeating-conic-gradient(from 0deg at 50% 30%, #f7e2ba 0deg 10deg, #ebd09b 10deg 20deg)";
 
 export default function MenuSection() {
   return (
@@ -76,74 +88,93 @@ export default function MenuSection() {
       </div>
 
       {/* Karty produktów */}
-      <div className="relative z-[5] flex w-full max-w-6xl flex-col items-center justify-center gap-6 md:flex-row md:items-stretch">
-        {cards.map((card) => (
+      <div className="relative z-[5] flex w-full max-w-[1100px] flex-wrap items-end justify-center gap-6 md:flex-nowrap">
+        {cards.map((card, idx) => (
           <div
-            key={card.title}
-            className="flex w-full max-w-sm flex-col border-4 border-black bg-[#FCEEBD] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+            key={card.title1 + card.title2}
+            className="group relative w-full flex-1"
+            style={{ filter: "drop-shadow(0 8px 0 rgba(0,0,0,0.4))" }}
           >
-            {/* Treść karty */}
-            <div className="flex flex-1 flex-col p-5">
-              {/* Nagłówek karty */}
-              <h3
-                className={`font-sans text-lg font-extrabold uppercase leading-tight ${card.titleClass}`}
-              >
-                {card.title}
-              </h3>
+            {/* Karta z agresywnym skosem (clip-path) i czarną obwódką */}
+            <div
+              className="relative flex h-[560px] flex-col bg-[#f7e2ba] p-5"
+              style={{ clipPath: clipPaths[idx], border: "4px solid #000", isolation: "isolate" }}
+            >
+              {/* Efekt "słoneczka" po najechaniu */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-[450ms] group-hover:opacity-100"
+                style={{ backgroundImage: SUNBURST_BG }}
+              />
 
-              {/* Grafika — karta środkowa ma sunburst/speed lines za obrazkiem */}
-              <div className="relative mt-4 flex h-44 items-center justify-center">
-                {card.center && (
-                  <svg
-                    aria-hidden="true"
-                    className="absolute inset-0 h-full w-full"
-                    viewBox="0 0 200 100"
-                    preserveAspectRatio="none"
-                  >
-                    {/* Sunburst / speed lines */}
-                    {Array.from({ length: 26 }).map((_, i) => (
-                      <line
-                        key={i}
-                        x1="100"
-                        y1="50"
-                        x2={50 + Math.cos((i / 26) * Math.PI * 2) * 120}
-                        y2={50 + Math.sin((i / 26) * Math.PI * 2) * 70}
-                        stroke="#000000"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        opacity="0.35"
-                      />
-                    ))}
-                  </svg>
-                )}
+              {/* Margines górny chroniący tytuł */}
+              <div className="relative z-[1] mt-9 flex h-20 items-center justify-center">
+                <h2
+                  className="text-center uppercase leading-[0.95] tracking-[1px] text-black"
+                  style={{ fontFamily: "var(--font-bangers), cursive", fontSize: "2.1rem" }}
+                >
+                  {card.title1}
+                  {card.title2 && (
+                    <>
+                      <br />
+                      {card.title2}
+                    </>
+                  )}
+                  {card.subTag && (
+                    <span style={{ color: "#487328", fontSize: "1.3rem" }}> {card.subTag}</span>
+                  )}
+                </h2>
+              </div>
+
+              {/* Obrazek */}
+              <div className="relative z-[1] mx-auto my-[10px] flex h-[180px] w-full items-center justify-center">
                 <Image
                   src={card.img}
                   alt={card.imgAlt}
-                  width={2032}
-                  height={774}
-                  className="relative h-full w-full object-contain"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
 
-              {/* Badge */}
-              <span
-                className={`mt-4 inline-block rounded px-3 py-1 text-sm font-bold ${card.badgeClass}`}
-              >
-                {card.badge}
-              </span>
+              {/* Sekcja dolna */}
+              <div className="relative z-[1] mt-auto flex flex-col">
+                {/* Badge */}
+                <div className="flex h-8 items-center">
+                  <span
+                    className={`rounded-[12px] px-[14px] py-[3px] text-[0.9rem] font-bold uppercase tracking-[0.5px] text-white ${
+                      card.isVege ? "bg-[#487328]" : "bg-[#1c2d42]"
+                    }`}
+                  >
+                    {card.badge}
+                  </span>
+                </div>
 
-              {/* Warianty cenowe */}
-              <ul className="mt-4 flex flex-col gap-1 border-t-2 border-dashed border-black pt-3 text-sm">
-                {card.variants.map((v) => (
-                  <li key={v.name} className="flex items-baseline justify-between gap-2 font-semibold">
-                    <span className="uppercase">
-                      {v.name}
-                      {v.size && <span className="text-slate-600"> ({v.size})</span>}
-                    </span>
-                    <span className="whitespace-nowrap">{v.price}</span>
-                  </li>
-                ))}
-              </ul>
+                {/* Ceny */}
+                <div className="mt-[10px] flex flex-col gap-1.5">
+                  {card.variants.map((v) => (
+                    <div
+                      key={v.name}
+                      className="flex items-center justify-between text-[1.1rem] font-bold"
+                    >
+                      <span className="uppercase text-black">
+                        {v.name}{" "}
+                        <span className="text-[0.95rem] font-medium text-[#555555]">
+                          ({v.size})
+                        </span>
+                      </span>
+                      <span className="text-[1.25rem] font-bold text-[#d65118]">{v.price}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Dodatek */}
+                {card.extra && (
+                  <div className="mt-1.5 flex h-6 items-center">
+                    <span className="text-[0.85rem] font-bold uppercase text-black">{card.extra}</span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}
