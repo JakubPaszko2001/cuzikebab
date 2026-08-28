@@ -62,7 +62,7 @@ const SUNBURST_BG =
 export default function MenuSection() {
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-hidden bg-[#222624] py-14 px-6 md:py-20">
-      {/* Tło: bg-menu-2.png (na kolorze #222624) */}
+      {/* Tło: bg-menu-3.png (na kolorze #222624) */}
       <Image
         src="/bg-menu-3.png"
         alt=""
@@ -73,14 +73,15 @@ export default function MenuSection() {
         aria-hidden="true"
       />
 
-      {/* Nagłówek sekcji */}
-      <div className="relative z-[5] mb-12 w-full max-w-6xl text-center md:mb-16">
-        {/* Główny napis NASZE MENU */}
+      {/* Nagłówek sekcji — zaczyna się tam, gdzie zaczyna się menu (lewa krawędź kart) */}
+      <div className="relative z-[5] mb-10 mt-8 w-full max-w-[1100px]">
         <h2
-          className="relative mt-2 font-[FontMain] uppercase italic text-[#FFD300] text-7xl sm:text-8xl md:text-9xl"
+          className="relative font-[FontMain] uppercase italic text-[#FFD300] text-8xl sm:text-9xl md:text-[10rem]"
           style={{
             WebkitTextStroke: "3px #000000",
             textShadow: "4px 4px 0 #000000",
+            transform: "rotate(-1.5deg)",
+            transformOrigin: "left center",
           }}
         >
           NASZE MENU
@@ -88,7 +89,7 @@ export default function MenuSection() {
       </div>
 
       {/* Karty produktów */}
-      <div className="relative z-[5] flex w-full max-w-[1100px] flex-wrap items-end justify-center gap-6 md:flex-nowrap">
+      <div className="relative z-[5] flex w-full max-w-[1100px] flex-wrap items-stretch justify-center gap-6 md:flex-nowrap">
         {cards.map((card, idx) => (
           <div
             key={card.title1 + card.title2}
@@ -151,7 +152,7 @@ export default function MenuSection() {
                 </div>
 
                 {/* Ceny */}
-                <div className="mt-[10px] flex flex-col gap-1.5">
+                <div className="mt-[10px] flex h-[105px] flex-col justify-start gap-1.5">
                   {card.variants.map((v) => (
                     <div
                       key={v.name}
@@ -169,16 +170,188 @@ export default function MenuSection() {
                 </div>
 
                 {/* Dodatek */}
-                {card.extra && (
                   <div className="mt-1.5 flex h-6 items-center">
+                  {card.extra && (
                     <span className="text-[0.85rem] font-bold uppercase text-black">{card.extra}</span>
-                  </div>
                 )}
+                </div>
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      {/* DOLNA SEKCJA (info banner + 4 kafelki) */}
+      <div className="relative z-[5] mt-10 w-full max-w-[1100px]">
+          {/* Info banner */}
+          <div
+            className="mb-4 flex items-center justify-center gap-2 bg-[#f7e2ba] px-5 py-3 text-center text-[1.05rem] font-bold uppercase text-black"
+            style={{
+              border: "4px solid #000",
+              filter: "drop-shadow(0 6px 0 rgba(0,0,0,0.4))",
+            }}
+          >
+            <span className="text-[1.3rem] text-[#d65118]">✕</span>
+            <span>
+              Istnieje możliwość zamówienia w tej samej cenie kebaba{" "}
+              <span className="text-[#d65118]">bez Gemüse</span>
+            </span>
+            <span className="text-[1.3rem] text-[#d65118]">✕</span>
+          </div>
+
+          {/* 4 kafelki */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {/* LUNCH */}
+            <div className="group">
+              <div
+                className="relative flex h-[220px] flex-col items-center justify-start overflow-hidden bg-[#f7e2ba] p-4"
+                style={{ border: "4px solid #000", filter: "drop-shadow(0 8px 0 rgba(0,0,0,0.4))", isolation: "isolate" }}
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-[450ms] group-hover:opacity-100"
+                  style={{ backgroundImage: SUNBURST_BG }}
+                />
+                <h3
+                  className="relative z-[1] mb-3 flex h-[64px] w-full flex-col items-center justify-center border-b-2 border-black pb-1 text-center uppercase leading-[1] text-black"
+                  style={{ fontFamily: "var(--font-bangers), cursive", fontSize: "2rem" }}
+                >
+                  Lunch{" "}
+                  <span
+                    className="text-[0.95rem] font-bold text-[#d65118]"
+                    style={{ fontFamily: "var(--font-sans), sans-serif" }}
+                  >
+                    12:00–15:00
+                  </span>
+                </h3>
+                <div className="relative z-[1] flex flex-1 flex-col items-center justify-center text-center">
+                  <div className="text-[0.9rem] font-bold uppercase leading-[1.2] text-black">
+                    Chicken Gemüse Kebab
+                    <br />
+                    + Cola + Frytki
+                  </div>
+                  <div
+                    className="mt-1 text-[#d65118]"
+                    style={{ fontFamily: "var(--font-bangers), cursive", fontSize: "2.6rem", lineHeight: 1 }}
+                  >
+                    = 32 zł
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* DODATKI */}
+            <div className="group">
+              <div
+                className="relative flex h-[220px] flex-col items-center justify-start overflow-hidden bg-[#f7e2ba] p-4"
+                style={{ border: "4px solid #000", filter: "drop-shadow(0 8px 0 rgba(0,0,0,0.4))", isolation: "isolate" }}
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-[450ms] group-hover:opacity-100"
+                  style={{ backgroundImage: SUNBURST_BG }}
+                />
+                <h3
+                  className="relative z-[1] mb-3 flex h-[64px] w-full items-center justify-center border-b-2 border-black pb-1 text-center uppercase leading-[1] text-black"
+                  style={{ fontFamily: "var(--font-bangers), cursive", fontSize: "2rem" }}
+                >
+                  Dodatki:
+                </h3>
+                <div className="relative z-[1] flex w-full flex-1 flex-col gap-1.5">
+                  <div className="flex items-center justify-between text-[0.95rem] font-bold text-black">
+                    <span>FRYTKI MAŁE</span>
+                    <span className="text-[1.1rem] font-bold text-[#d65118]">12 zł</span>
+                  </div>
+                  <div className="flex items-center justify-between text-[0.95rem] font-bold text-black">
+                    <span>FRYTKI DUŻE</span>
+                    <span className="text-[1.1rem] font-bold text-[#d65118]">16 zł</span>
+                  </div>
+                </div>
+                <div className="relative z-[1] mt-auto text-center text-[0.8rem] font-bold italic text-[#555555]">
+                  (Cuzi Sauce lub inne)
+                </div>
+              </div>
+            </div>
+
+            {/* NAPOJE */}
+            <div className="group">
+              <div
+                className="relative flex h-[220px] flex-col items-center justify-start overflow-hidden bg-[#f7e2ba] p-4"
+                style={{ border: "4px solid #000", filter: "drop-shadow(0 8px 0 rgba(0,0,0,0.4))", isolation: "isolate" }}
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-[450ms] group-hover:opacity-100"
+                  style={{ backgroundImage: SUNBURST_BG }}
+                />
+                <h3
+                  className="relative z-[1] mb-3 flex h-[64px] w-full items-center justify-center border-b-2 border-black pb-1 text-center uppercase leading-[1] text-black"
+                  style={{ fontFamily: "var(--font-bangers), cursive", fontSize: "2rem" }}
+                >
+                  Napoje:
+                </h3>
+                <div className="relative z-[1] flex w-full flex-1 flex-col gap-1.5">
+                  <div className="flex items-center justify-between text-[0.95rem] font-bold text-black">
+                    <span>AYRAN</span>
+                    <span className="text-[1.1rem] font-bold text-[#d65118]">9 zł</span>
+                  </div>
+                  <div className="flex items-center justify-between text-[0.95rem] font-bold text-black">
+                    <div>
+                      <span>COCA COLA</span>
+                      <span className="block text-[0.7rem] font-medium italic text-[#555555]">
+                        I WSZYSTKIE INNE SOFTY
+                      </span>
+                    </div>
+                    <span className="text-[1.1rem] font-bold text-[#d65118]">8 zł</span>
+                  </div>
+                  <div className="flex items-center justify-between text-[0.95rem] font-bold text-black">
+                    <span>WODA</span>
+                    <span className="text-[1.1rem] font-bold text-[#d65118]">7 zł</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* SOSY */}
+            <div className="group">
+              <div
+                className="relative flex h-[220px] flex-col items-center justify-start overflow-hidden bg-[#f7e2ba] p-4"
+                style={{ border: "4px solid #000", filter: "drop-shadow(0 8px 0 rgba(0,0,0,0.4))", isolation: "isolate" }}
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-[450ms] group-hover:opacity-100"
+                  style={{ backgroundImage: SUNBURST_BG }}
+                />
+                <h3
+                  className="relative z-[1] mb-3 flex h-[64px] w-full items-center justify-center border-b-2 border-black pb-1 text-center uppercase leading-[1] text-black"
+                  style={{ fontFamily: "var(--font-bangers), cursive", fontSize: "2rem" }}
+                >
+                  Sosy:
+                </h3>
+                <div className="relative z-[1] flex w-full flex-1 flex-col gap-0.5">
+                  {[
+                    { name: "Cuzi Sauce", color: "#f5a623" },
+                    { name: "Czosnkowy", color: "#ffffff" },
+                    { name: "Ostry", color: "#e60000" },
+                    { name: "Ziołowy", color: "#50b83c" },
+                  ].map((s) => (
+                    <div
+                      key={s.name}
+                      className="flex items-center gap-2.5 text-[0.95rem] font-bold uppercase text-black"
+                    >
+                      <span
+                        className="inline-block h-3.5 w-3.5 flex-shrink-0 rounded-full border-2 border-black"
+                        style={{ backgroundColor: s.color }}
+                      />
+                      <span>{s.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
   );
 }
