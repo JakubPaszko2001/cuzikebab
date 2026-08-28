@@ -78,7 +78,7 @@ export default function MenuSection() {
         <h2
           className="relative font-[FontMain] uppercase italic text-[#FFD300] text-8xl sm:text-9xl md:text-[10rem]"
           style={{
-            WebkitTextStroke: "3px #000000",
+            WebkitTextStroke: "5px #000000",
             textShadow: "4px 4px 0 #000000",
             transform: "rotate(-1.5deg)",
             transformOrigin: "left center",

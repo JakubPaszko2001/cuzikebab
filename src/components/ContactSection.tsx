@@ -19,7 +19,8 @@ export default function ContactSection() {
         {/* Tytuł KONTAKT */}
         <h2
           className="font-[FontMain] uppercase tracking-[2px] text-[#FFD300] text-7xl sm:text-8xl md:text-[10vw] leading-[0.85]"
-          style={{
+                    style={{
+            WebkitTextStroke: "5px #000000",
             transform: "rotate(-3deg) skewX(-5deg)",
             textShadow: "5px 5px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000",
             marginBottom: "4vh",
@@ -77,16 +78,17 @@ export default function ContactSection() {
                 <span style={{ transform: "skewX(15deg)" }}>👍</span>
               </div>
             </div>
-            <div>
-              <h4 className="font-[FontMain] text-[#FFD300] uppercase text-2xl leading-none tracking-wide md:text-[1.8vw] [text-shadow:2px_2px_0_#000000]">OBSERWUJ NAS:</h4>
-              <div className="mt-[0.5vh] flex gap-[1vw]">
-                <a href="https://www.instagram.com/cuzikebab/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-[0.5vw] border-2 border-[#FFD300] bg-black px-[0.8vw] py-[0.4vh] text-[14px] font-bold text-white no-underline md:text-[1vw]">
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-[1.2em] w-[1.2em] text-[#FFD300]">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                  </svg>
-                  @cuzikebab
-                </a>              </div>
-            </div>
+                        <div>
+                          <h4 className="font-[FontMain] text-[#FFD300] uppercase text-2xl leading-none tracking-wide md:text-[1.8vw] [text-shadow:2px_2px_0_#000000]">OBSERWUJ NAS:</h4>
+                          <div className="mt-[0.5vh] flex gap-[1vw]">
+                                                        <a href="https://www.instagram.com/cuzikebab/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-[0.5vw] bg-black py-[0.4vh] text-[14px] font-bold text-white no-underline md:text-[1vw]">
+                                                          <svg viewBox="0 0 24 24" fill="currentColor" className="h-[1.2em] w-[1.2em] shrink-0 text-[#FFD300]">
+                                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                                          </svg>
+                                                          @cuzikebab
+                                                        </a>
+                          </div>
+                        </div>
           </div>
 
           {/* Godziny */}
@@ -103,12 +105,25 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* Przycisk akcji — jak w HeroSection */}
+                {/* Przycisk akcji — jak w HeroSection */}
         <div className="mt-4 inline-block transition-transform duration-200 hover:scale-105" style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}>
           <a href="tel:+48796664366" className="relative inline-block cursor-pointer rounded border-4 border-black bg-[#FFD300] px-11 py-4 outline-none" style={{ transform: "skewX(-15deg)" }}>
             <span className="block text-[45px] uppercase tracking-[2px] leading-none text-black" style={{ fontFamily: "var(--font-bangers)", transform: "skewX(15deg)" }}>SKONTAKTUJ SIE</span>
           </a>
         </div>
+      </div>
+
+            {/* Postać — absolutna, na dole, po lewej stronie */}
+      <div className="absolute bottom-0 right-0 z-[3] hidden items-end justify-start md:flex">
+        <Image
+          src="/postac-kontakt-3.png"
+          alt="Postać z informacjami kontaktowymi"
+          width={700}
+          height={1000}
+          priority
+          className="object-contain"
+          style={{ maxHeight: "92vh" }}
+        />
       </div>
     </section>
   );
