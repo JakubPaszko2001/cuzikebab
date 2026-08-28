@@ -86,7 +86,7 @@ export default function GemuseSection() {
         {/* Prawa strona — grafika warzyw */}
         <div className="relative flex items-center justify-center md:w-[45%]">
           <Image
-            src="/warzywa7.png"
+            src="/warzywa8.png"
             alt="Świeże warzywa w stylu komiksu"
             width={900}
             height={900}
