@@ -99,6 +99,7 @@ export default function MenuSection() {
             {/* Karta z agresywnym skosem (clip-path) i czarną obwódką */}
             <div
               className="relative flex h-[560px] flex-col bg-[#f7e2ba] p-5"
+              // kolor FFEDCA a f7e2ba
               style={{ clipPath: clipPaths[idx], border: "4px solid #000", isolation: "isolate" }}
             >
               {/* Efekt "słoneczka" po najechaniu */}
@@ -144,7 +145,8 @@ export default function MenuSection() {
                 <div className="flex h-8 items-center">
                   <span
                     className={`rounded-[12px] px-[14px] py-[3px] text-[0.9rem] font-bold uppercase tracking-[0.5px] text-white ${
-                      card.isVege ? "bg-[#487328]" : "bg-[#1c2d42]"
+                      // card.isVege ? "bg-[#FFD300]" : "bg-[#FFD300]"
+                      card.isVege ? "bg-black" : "bg-black"
                     }`}
                   >
                     {card.badge}
@@ -171,10 +173,10 @@ export default function MenuSection() {
 
                 {/* Dodatek */}
                   <div className="mt-1.5 flex h-6 items-center">
-                  {card.extra && (
-                    <span className="text-[0.85rem] font-bold uppercase text-black">{card.extra}</span>
-                )}
-                </div>
+                    {card.extra && (
+                      <span className="text-[0.85rem] font-bold uppercase text-black">{card.extra}</span>
+                    )}
+                  </div>
               </div>
             </div>
           </div>
