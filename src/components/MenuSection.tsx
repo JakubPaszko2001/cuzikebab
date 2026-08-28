@@ -10,7 +10,7 @@ const cards = [
     badge: "Bułka",
     isVege: false,
 
-    img: "/chicken-burger.png",
+    img: "/chicken-burger2.png",
     imgAlt: "Chicken gemüse kebab",
     variants: [
       { name: "SMALL", size: "140 G", price: "34 zł" },
@@ -187,7 +187,7 @@ export default function MenuSection() {
       <div className="relative z-[5] mt-10 w-full max-w-[1100px]">
           {/* Info banner */}
           <div
-            className="mb-4 flex items-center justify-center gap-2 bg-[#f7e2ba] px-5 py-3 text-center text-[1.05rem] font-bold uppercase text-black"
+            className="mb-10 flex items-center justify-center gap-2 bg-[#f7e2ba] px-5 py-3 text-center text-[1.05rem] font-bold uppercase text-black"
             style={{
               border: "4px solid #000",
               filter: "drop-shadow(0 6px 0 rgba(0,0,0,0.4))",
