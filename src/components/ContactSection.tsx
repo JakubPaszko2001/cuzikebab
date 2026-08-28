@@ -4,12 +4,13 @@
 export default function ContactSection() {
   return (
     <section className="relative flex min-h-screen w-full items-center justify-between overflow-hidden border-t-6 border-black bg-[#000000] px-[5vw] py-[5vh] text-white">
-      {/* Tło: promienie komiksowe */}
+      {/* Tło: promienie komiksowe (odbicie lustrzane w osi X) */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background: "repeating-conic-gradient(from 0deg at 75% 50%, #222624 0deg 10deg, #000000 10deg 20deg)",
+          transform: "scaleY(-1)",
         }}
       />
 

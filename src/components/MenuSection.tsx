@@ -9,7 +9,8 @@ const cards = [
     subTag: null,
     badge: "Bułka",
     isVege: false,
-    img: "/warzywa2.png",
+
+    img: "/chicken-burger.png",
     imgAlt: "Chicken gemüse kebab",
     variants: [
       { name: "SMALL", size: "140 G", price: "34 zł" },
@@ -24,7 +25,7 @@ const cards = [
     subTag: null,
     badge: "Bułka",
     isVege: false,
-    img: "/warzywa5.png",
+    img: "/steak-kebab.png",
     imgAlt: "Steak beef gemüse kebab",
     variants: [
       { name: "SMALL", size: "140 G", price: "37 zł" },
@@ -38,8 +39,7 @@ const cards = [
     title2: null,
     subTag: "(VEGE)",
     badge: "Bułka",
-    isVege: true,
-    img: "/warzywa6.png",
+    img: "/falafel-kebab.png",
     imgAlt: "Falafel vege kebab",
     variants: [
       { name: "SMALL", size: "4 SZT.", price: "32 zł" },
