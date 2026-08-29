@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function GemuseSection() {
   return (
-    <section className="relative flex min-h-[34vh] w-full items-center overflow-hidden border-y-6 border-black bg-amber-400">
+    <section id="o-nas" className="relative flex min-h-[34vh] w-full items-center overflow-hidden border-y-6 border-black bg-amber-400">
       {/* ---- Zawartość: lewa tekst / prawa grafika ---- */}
       <div className="relative z-[10] flex w-full flex-col md:flex-row">
         {/* Lewa strona — tekst (tło tylko w tej części, nie na 100vw) */}

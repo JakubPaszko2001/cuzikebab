@@ -234,7 +234,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pl"
-      className={`${geistSans.variable} ${geistMono.variable} ${bangers.variable} ${pacifico.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bangers.variable} ${pacifico.variable} h-full scroll-smooth antialiased`}
     >
       <head>
         {/* Favicony i ikony aplikacji */}

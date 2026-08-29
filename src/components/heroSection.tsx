@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 export default function HeroSection() {
   return (
     <section
+      id="strona-glowna"
       className="relative flex items-center justify-center overflow-hidden"
       style={{ height: "100vh", width: "100vw" }}
     >

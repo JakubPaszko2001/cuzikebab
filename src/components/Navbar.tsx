@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const links = [
-  { label: "Strona Glowna", href: "#" },
-  { label: "O Nas", href: "#" },
-  { label: "Menu", href: "#" },
-  { label: "Kontakt", href: "#" },
+  { label: "Strona Glowna", href: "#strona-glowna" },
+  { label: "O Nas", href: "#o-nas" },
+  { label: "Menu", href: "#menu" },
+  { label: "Kontakt", href: "#kontakt" },
 ];
 
 export default function Navbar() {

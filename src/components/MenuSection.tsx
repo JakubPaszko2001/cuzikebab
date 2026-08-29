@@ -61,7 +61,7 @@ const SUNBURST_BG =
 
 export default function MenuSection() {
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-hidden bg-[#222624] py-14 px-6 md:py-20">
+    <section id="menu" className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-hidden bg-[#222624] py-14 px-6 md:py-20">
       {/* Tło: bg-menu-3.png (na kolorze #222624) */}
       <Image
         src="/bg-menu-3.png"
