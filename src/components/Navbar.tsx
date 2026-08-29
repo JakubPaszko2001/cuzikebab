@@ -37,7 +37,7 @@ export default function Navbar() {
                   className="absolute inset-0 flex items-center justify-center"
                   style={{
                     // WebkitTextStroke: "4px #000000",
-                    color: "transparent",
+                    // color: "transparent",
                   }}
                 >
                   {link.label}

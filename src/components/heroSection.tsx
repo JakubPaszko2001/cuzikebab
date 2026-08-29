@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
 
 export default function HeroSection() {
   return (
@@ -6,6 +7,9 @@ export default function HeroSection() {
       className="relative flex items-center justify-center overflow-hidden"
       style={{ height: "100vh", width: "100vw" }}
     >
+      {/* Nawigacja przypięta do sekcji hero */}
+      <Navbar />
+
       {/* Tło z delikatnym blurem 2px */}
       <Image
         src="/bg2.png"
