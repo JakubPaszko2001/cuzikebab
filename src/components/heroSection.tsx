@@ -26,8 +26,8 @@ export default function HeroSection() {
       />
       {/* Napis CUZI / KEBAB + podtytuł — absolutnie z lewej strony */}
       <div
-        className="absolute left-40 top-30 z-[10] m-0 p-0"
-        style={{ transform: "rotate(-8deg)" }}
+        className="absolute left-40 top-1/2 z-[10] m-0 p-0"
+        style={{ transform: "translateY(-50%) rotate(-8deg)" }}
       >
         <h1 className="m-0 p-0 font-[FontMain] leading-none">
           {/* Warstwa spodnia: sam obrys (outside) */}

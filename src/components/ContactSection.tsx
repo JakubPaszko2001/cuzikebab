@@ -94,8 +94,16 @@ export default function ContactSection() {
           {/* Godziny */}
           <div className="flex h-full min-h-[140px] items-start gap-[1vw] md:min-h-[8vh]">
             <div className="shrink-0" style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}>
-              <div className="flex h-[45px] w-[45px] items-center justify-center rounded border-4 border-black bg-[#FFD300] text-[20px] text-black md:h-[3.2vw] md:w-[3.2vw] md:text-[1.6vw]" style={{ transform: "skewX(-15deg)" }}>
-                <span style={{ transform: "skewX(15deg)" }}>🕒</span>
+                            <div className="flex h-[45px] w-[45px] items-center justify-center rounded border-4 border-black bg-[#FFD300] text-black md:h-[3.2vw] md:w-[3.2vw]">
+                <span style={{ transform: "skewX(15deg)" }}>
+                  <Image
+                    src="/time.svg"
+                    alt="Godziny otwarcia"
+                    width={24}
+                    height={24}
+                    className="h-[90%] w-[90%] object-contain"
+                  />
+                </span>
               </div>
             </div>
             <div>
