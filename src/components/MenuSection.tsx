@@ -89,7 +89,7 @@ export default function MenuSection() {
       </div>
 
       {/* Karty produktów */}
-      <div className="relative z-[5] flex w-full max-w-[1100px] flex-wrap items-stretch justify-center gap-6 md:flex-nowrap">
+      <div className="relative z-[5] flex w-full max-w-[1100px] flex-col items-stretch justify-center gap-6 md:flex-row">
         {cards.map((card, idx) => (
           <div
             key={card.title1 + card.title2}

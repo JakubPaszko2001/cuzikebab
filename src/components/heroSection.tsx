@@ -20,66 +20,57 @@ export default function HeroSection() {
         sizes="100vw"
         className="object-cover object-center blur-[4px] scale-100"
       />
-      {/* Postać jako osobna warstwa */}
+      {/* Postać jako osobna warstwa — tylko widoczna powyżej mobile (sm:) */}
       <Image
         src="/postac11.png"
         alt="Postać"
         width={1016}
         height={848}
         priority
-        className="absolute bottom-0 right-15 z-[2] h-auto w-[70vw] min-w-[520px] max-w-[1040px] object-contain"
+        className="absolute bottom-0 right-15 z-[2] hidden h-auto w-[70vw] min-w-[520px] max-w-[1040px] object-contain sm:block"
       />
-      {/* Napis CUZI / KEBAB + podtytuł — absolutnie z lewej strony */}
+      {/* Napis CUZI / KEBAB + podtytuł — wyśrodkowany pod mobile */}
       <div
-        className="absolute left-40 top-1/2 z-[10] m-0 p-0"
-        style={{ transform: "translateY(-50%) rotate(-8deg)" }}
+        className="absolute left-0 top-1/2 z-[10] m-0 w-full -translate-y-1/2 p-0 text-center sm:left-40 sm:w-auto sm:rotate-[-5deg] sm:text-left"
       >
         <h1 className="m-0 p-0 font-[FontMain] leading-none">
           {/* Warstwa spodnia: sam obrys (outside) */}
           <span
             aria-hidden="true"
-            className="absolute inset-0"
-            style={{
-              WebkitTextStroke: "34px black",
-              color: "transparent",
-            }}
+            className="hero-outline-big absolute inset-0"
           >
-          <span className="block text-[200px] leading-none">CUZI</span>
-          <span className="block text-[200px] leading-none">KEBAB</span>
-        </span>
+            <span className="block text-[100px] leading-none sm:text-[200px]">CUZI</span>
+            <span className="block text-[100px] leading-none sm:text-[200px]">KEBAB</span>
+          </span>
 
           {/* Warstwa wierzchnia: wypełnienie */}
           <span className="relative block">
-          <span className="block text-[200px] leading-none text-white">CUZI</span>
-          <span className="block text-[200px] leading-none text-[#FFD300]">KEBAB</span>
+            <span className="block text-[100px] leading-none text-white sm:text-[200px]">CUZI</span>
+            <span className="block text-[100px] leading-none text-[#FFD300] sm:text-[200px]">KEBAB</span>
           </span>
         </h1>
 
         {/* Podtytuł */}
-        <h2 className="relative m-0 mt-6 p-0 font-[FontMain] leading-none">
-          {/* Warstwa spodnia: obrys 10px (outside) */}
+        <h2 className="relative m-0 mt-4 p-0 font-[FontMain] leading-none sm:mt-6">
+          {/* Warstwa spodnia: obrys */}
           <span
             aria-hidden="true"
-            className="absolute inset-0"
-            style={{
-              WebkitTextStroke: "8px black",
-              color: "transparent",
-            }}
+            className="hero-outline-sub absolute inset-0"
           >
-            <span className="block text-[44px] leading-none">
+            <span className="block text-[24px] leading-none sm:text-[44px]">
               kazdy pytal,
             </span>
-            <span className="block text-[44px] leading-none">
+            <span className="block text-[24px] leading-none sm:text-[44px]">
               kazdy <span className="text-[#FFD300]">potrzebowal</span>
             </span>
           </span>
 
           {/* Warstwa wierzchnia: wypełnienie */}
           <span className="relative block">
-            <span className="block text-[44px] leading-none text-white">
+            <span className="block text-[24px] leading-none text-white sm:text-[44px]">
               kazdy pytal,
             </span>
-            <span className="block text-[44px] leading-none text-white">
+            <span className="block text-[24px] leading-none text-white sm:text-[44px]">
               kazdy <span className="text-[#FFD300]">potrzebowal</span>
             </span>
           </span>
@@ -87,16 +78,16 @@ export default function HeroSection() {
 
         {/* Przycisk ZOBACZ MENU (równoległobok wg przycisk2.html) */}
         <div
-          className="mt-10 inline-block transition-transform duration-200 hover:scale-105"
+          className="mt-6 inline-block transition-transform duration-200 hover:scale-105 sm:mt-10"
           style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}
         >
           <button
             type="button"
-            className="relative inline-block cursor-pointer rounded border-4 border-black bg-[#FFD300] px-11 py-4 outline-none"
+            className="relative inline-block cursor-pointer rounded border-4 border-black bg-[#FFD300] px-8 py-3 outline-none sm:px-11 sm:py-4"
             style={{ transform: "skewX(-15deg)" }}
           >
             <span
-              className="block text-[45px] uppercase tracking-[2px] leading-none text-black"
+              className="block text-[24px] uppercase tracking-[2px] leading-none text-black sm:text-[45px]"
               style={{ fontFamily: "var(--font-bangers)", transform: "skewX(15deg)" }}
             >
               ZOBACZ MENU

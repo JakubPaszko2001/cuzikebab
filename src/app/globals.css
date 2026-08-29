@@ -35,3 +35,34 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ===== Obrys komiksowy — HeroSection ===== */
+/* Napis CUZI / KEBAB (duży) */
+.hero-outline-big {
+  -webkit-text-stroke: 14px #000000;
+}
+@media (min-width: 640px) {
+  .hero-outline-big {
+    -webkit-text-stroke: 34px #000000;
+  }
+}
+
+/* Podtytuł "kazdy pytal, kazdy potrzebowal" */
+.hero-outline-sub {
+  -webkit-text-stroke: 4px #000000;
+}
+@media (min-width: 640px) {
+  .hero-outline-sub {
+    -webkit-text-stroke: 8px #000000;
+  }
+}
+
+/* ===== GemuseSection — skośny podział tła (wyłączony na mobile) ===== */
+.gemuse-clip {
+  clip-path: none;
+}
+@media (min-width: 768px) {
+  .gemuse-clip {
+    clip-path: polygon(0 0, 100% 0, 62% 100%, 0 100%);
+  }
+}
+

@@ -9,9 +9,8 @@ export default function GemuseSection() {
         <div className="relative overflow-hidden md:w-[55%]">
           {/* Warstwa tła szarego, przycięta do ukośnego podziału */}
           <div
-            className="absolute inset-0"
+            className="gemuse-clip absolute inset-0"
             style={{
-              clipPath: "polygon(0 0, 100% 0, 62% 100%, 0 100%)",
               backgroundImage: "url('/szare-tlo-2.png')",
               backgroundSize: "cover",
               backgroundPosition: "center top",
@@ -21,7 +20,7 @@ export default function GemuseSection() {
 
           {/* Czarna kreska 4px wzdłuż skośnej krawędzi */}
           <svg
-            className="pointer-events-none absolute inset-0 z-[8] h-full w-full"
+            className="pointer-events-none absolute inset-0 z-[8] hidden h-full w-full md:block"
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
                 aria-hidden="true"

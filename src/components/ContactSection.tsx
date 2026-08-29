@@ -14,8 +14,8 @@ export default function ContactSection() {
         }}
       />
 
-      {/* Lewa sekcja z treścią */}
-      <div className="relative z-[2] flex w-full flex-col justify-center md:w-[55vw]">
+            {/* Lewa sekcja z treścią */}
+            <div className="relative z-[2] flex w-full flex-col justify-center md:w-[55vw]">
         {/* Tytuł KONTAKT */}
         <h2
           className="font-[FontMain] uppercase tracking-[2px] text-[#FFD300] text-7xl sm:text-8xl md:text-[10vw] leading-[0.85]"
@@ -129,9 +129,9 @@ export default function ContactSection() {
 
                 {/* Przycisk akcji — jak w HeroSection */}
         <div className="mt-4 inline-block transition-transform duration-200 hover:scale-105" style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}>
-          <a href="tel:+48796664366" className="relative inline-block cursor-pointer rounded border-4 border-black bg-[#FFD300] px-11 py-4 outline-none" style={{ transform: "skewX(-15deg)" }}>
-            <span className="block text-[45px] uppercase tracking-[2px] leading-none text-black" style={{ fontFamily: "var(--font-bangers)", transform: "skewX(15deg)" }}>SKONTAKTUJ SIE</span>
-          </a>
+                    <a href="tel:+48796664366" className="relative inline-block cursor-pointer rounded border-4 border-black bg-[#FFD300] px-11 py-4 outline-none" style={{ transform: "skewX(-15deg)" }}>
+                      <span className="block text-[45px] uppercase tracking-[2px] leading-none text-black" style={{ fontFamily: "var(--font-bangers)", transform: "skewX(15deg)" }}>SKONTAKTUJ SIE</span>
+                    </a>
         </div>
       </div>
 
