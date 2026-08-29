@@ -69,15 +69,11 @@ export default function GemuseSection() {
                 className="absolute inset-0 text-white"
                 style={{ WebkitTextStroke: "4px black", color: "transparent" }}
               >
-                Jestesmy milosnikami dobrego smaku i swiezych skladnikow! W
-                naszym lokalu znajdziesz swieze warzywa, soczyste mieso i
-                autorski sos, ktore tworza niepowtarzalny smak.
+                Generacja Cuzi przyprowadza do Polski smak, ktory do tej pory byl tylko za nasza zachodnia granica. Wprowadzamy swiezosc, na ktora kazdy czekal.
               </span>
               {/* Warstwa wierzchnia: wypełnienie */}
               <span className="relative text-white" style={{ textShadow: "4px 4px 0 #000000" }}>
-                Jestesmy milosnikami dobrego smaku i swiezych skladnikow! W
-                naszym lokalu znajdziesz swieze warzywa, soczyste mieso i
-                autorski sos, ktore tworza niepowtarzalny smak.
+                Generacja Cuzi przyprowadza do Polski smak, ktory do tej pory byl tylko za nasza zachodnia granica. Wprowadzamy swiezosc, na ktora kazdy czekal.
               </span>
             </p>
         </div>
