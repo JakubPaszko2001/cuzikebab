@@ -36,14 +36,14 @@ export default function Navbar() {
                   aria-hidden="true"
                   className="absolute inset-0 flex items-center justify-center"
                   style={{
-                    WebkitTextStroke: "4px #000000",
+                    // WebkitTextStroke: "4px #000000",
                     color: "transparent",
                   }}
                 >
                   {link.label}
                 </span>
                 {/* Warstwa wierzchnia: pełne wypełnienie */}
-                <span className="relative text-white">{link.label}</span>
+                <span className="relative text-black">{link.label}</span>
               </a>
             </li>
           ))}
