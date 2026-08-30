@@ -27,7 +27,7 @@ export default function HeroSection() {
         width={1016}
         height={848}
         priority
-        className="absolute bottom-0 right-15 z-[2] hidden h-auto w-[70vw] min-w-[520px] max-w-[1040px] object-contain lg:block"
+        className="absolute bottom-0 right-15 z-[2] hidden h-auto w-[70vw] min-w-[520px] max-w-[1040px] object-contain 2xl:block"
       />
       {/* Napis CUZI / KEBAB + podtytuł — wyśrodkowany pod mobile */}
       <div

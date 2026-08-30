@@ -143,7 +143,7 @@ export default function ContactSection() {
       </div>
 
             {/* Postać — absolutna, na dole, po lewej stronie */}
-      <div className="absolute bottom-0 right-0 z-[3] hidden items-end justify-start md:flex">
+      <div className="absolute bottom-0 right-0 z-[3] hidden items-end justify-start 2xl:flex">
         <Image
           src="/postac-kontakt-13.png"
           alt="Postać z informacjami kontaktowymi"

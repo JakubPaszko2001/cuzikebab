@@ -2,6 +2,7 @@ import Image from "next/image";
 
 export default function GemuseSection() {
   return (
+
     <section id="o-nas" className="relative flex min-h-[34vh] w-full items-center overflow-hidden border-y-6 border-black bg-amber-400">
       {/* ---- Zawartość: lewa tekst / prawa grafika ---- */}
       <div className="relative z-[10] flex w-full flex-col lg:flex-row">
@@ -37,7 +38,7 @@ export default function GemuseSection() {
             />
           </svg>
 
-          <div className="relative z-[10] flex flex-col justify-center gap-3 border-b-4 border-black px-8 py-6 lg:border-b-0 lg:px-20">
+          <div className="relative z-[10] flex flex-col justify-center h-full gap-3 border-b-4 border-black px-8 py-6 lg:border-b-0 lg:px-20">
             {/* Nagłówek GEMUSE KEBAB — jedna linia, komiksowy outline (outside) */}
             <h2
               className="relative font-[FontMain] text-4xl uppercase leading-none -rotate-2 sm:text-5xl lg:text-6xl"
@@ -94,4 +95,3 @@ export default function GemuseSection() {
     </section>
   );
 }
-
