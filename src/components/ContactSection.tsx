@@ -3,7 +3,7 @@
 /* Sekcja Kontakt */
 export default function ContactSection() {
   return (
-    <section id="kontakt" className="relative flex h-screen w-full items-center justify-between overflow-hidden border-t-6 border-black bg-[#000000] py-[3vh] text-white md:h-auto md:min-h-screen md:px-[5vw] md:py-[5vh]">
+    <section id="kontakt" className="relative flex h-screen w-full items-center justify-between border-t-6 border-black bg-[#000000] py-[3vh] text-white md:h-auto md:min-h-screen md:px-[5vw] md:py-[5vh]">
       {/* Tło: promienie komiksowe (odbicie lustrzane w osi X) */}
       <div
         aria-hidden="true"
