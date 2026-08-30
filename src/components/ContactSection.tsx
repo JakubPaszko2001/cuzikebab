@@ -17,15 +17,19 @@ export default function ContactSection() {
             {/* Lewa sekcja z treścią */}
             <div className="relative z-[2] flex h-full w-full flex-col justify-center overflow-y-auto px-6 md:h-auto md:overflow-visible md:px-0 md:w-[55vw]">
         {/* Tytuł KONTAKT */}
-                <h2
+                                <h2
           className="font-[FontMain] uppercase tracking-[2px] text-[#FFD300] text-8xl sm:text-9xl md:text-[12vw] leading-[0.85] mb-[2vh] md:mb-[4vh]"
                     style={{
-            WebkitTextStroke: "5px #000000",
             transform: "rotate(-3deg) skewX(-5deg)",
-            textShadow: "5px 5px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000",
           }}
         >
-          KONTAKT
+          <span
+            aria-hidden="true"
+            className="hero-outline-big absolute inset-0 leading-[0.85] text-[#FFD300]"
+          >
+            KONTAKT
+          </span>
+          <span className="relative text-[#FFD300]">KONTAKT</span>
         </h2>
 
         {/* Układ dwukolumnowy */}

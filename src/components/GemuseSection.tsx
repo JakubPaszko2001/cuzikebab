@@ -87,7 +87,7 @@ export default function GemuseSection() {
             height={900}
             priority={false}
             quality={100}
-            className="h-[34vh] w-auto object-contain"
+            className="h-[26vh] w-auto object-contain md:h-[34vh]"
           />
         </div>
       </div>
