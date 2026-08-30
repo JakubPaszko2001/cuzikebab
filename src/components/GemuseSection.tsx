@@ -37,7 +37,7 @@ export default function GemuseSection() {
             />
           </svg>
 
-          <div className="relative z-[10] flex flex-col justify-center gap-3 px-8 py-6 md:px-12 lg:px-20">
+          <div className="relative z-[10] flex flex-col justify-center gap-3 border-b-4 border-black px-8 py-6 md:border-b-0 md:px-12 lg:px-20">
             {/* Nagłówek GEMUSE KEBAB — jedna linia, komiksowy outline (outside) */}
             <h2
               className="relative font-[FontMain] text-4xl uppercase leading-none -rotate-2 sm:text-5xl lg:text-6xl"
@@ -79,7 +79,7 @@ export default function GemuseSection() {
       </div>
 
         {/* Prawa strona — grafika warzyw */}
-        <div className="relative flex items-center justify-center md:w-[45%]">
+        <div className="relative flex items-center justify-center px-8 py-6 md:w-[45%] md:px-0">
           <Image
             src="/warzywa8.png"
             alt="Świeże warzywa w stylu komiksu"
@@ -87,7 +87,7 @@ export default function GemuseSection() {
             height={900}
             priority={false}
             quality={100}
-            className="h-[26vh] w-auto object-contain md:h-[34vh]"
+            className="h-[16vh] w-auto object-contain md:h-[30vh]"
           />
         </div>
       </div>
