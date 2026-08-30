@@ -78,7 +78,7 @@ export default function HeroSection() {
 
         {/* Przycisk ZOBACZ MENU (równoległobok wg przycisk2.html) */}
         <div
-          className="mt-6 inline-block transition-transform duration-200 hover:scale-105 sm:mt-10"
+          className="mt-6 inline-block px-2 transition-transform duration-200 hover:scale-105 sm:mt-10 sm:px-3"
           style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}
         >
           <a
