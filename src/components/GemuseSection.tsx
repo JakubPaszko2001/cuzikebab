@@ -4,9 +4,9 @@ export default function GemuseSection() {
   return (
     <section id="o-nas" className="relative flex min-h-[34vh] w-full items-center overflow-hidden border-y-6 border-black bg-amber-400">
       {/* ---- Zawartość: lewa tekst / prawa grafika ---- */}
-      <div className="relative z-[10] flex w-full flex-col md:flex-row">
+      <div className="relative z-[10] flex w-full flex-col lg:flex-row">
         {/* Lewa strona — tekst (tło tylko w tej części, nie na 100vw) */}
-        <div className="relative overflow-hidden md:w-[55%]">
+        <div className="relative overflow-hidden lg:w-[55%]">
           {/* Warstwa tła szarego, przycięta do ukośnego podziału */}
           <div
             className="gemuse-clip absolute inset-0"
@@ -20,7 +20,7 @@ export default function GemuseSection() {
 
           {/* Czarna kreska 4px wzdłuż skośnej krawędzi */}
           <svg
-            className="pointer-events-none absolute inset-0 z-[8] hidden h-full w-full md:block"
+            className="pointer-events-none absolute inset-0 z-[8] hidden h-full w-full lg:block"
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
                 aria-hidden="true"
@@ -37,7 +37,7 @@ export default function GemuseSection() {
             />
           </svg>
 
-          <div className="relative z-[10] flex flex-col justify-center gap-3 border-b-4 border-black px-8 py-6 md:border-b-0 md:px-12 lg:px-20">
+          <div className="relative z-[10] flex flex-col justify-center gap-3 border-b-4 border-black px-8 py-6 lg:border-b-0 lg:px-20">
             {/* Nagłówek GEMUSE KEBAB — jedna linia, komiksowy outline (outside) */}
             <h2
               className="relative font-[FontMain] text-4xl uppercase leading-none -rotate-2 sm:text-5xl lg:text-6xl"
@@ -79,7 +79,7 @@ export default function GemuseSection() {
       </div>
 
         {/* Prawa strona — grafika warzyw */}
-        <div className="relative flex items-center justify-center px-8 py-6 md:w-[45%] md:px-0">
+        <div className="relative flex items-center justify-center px-8 py-6 lg:w-[45%] lg:px-0">
           <Image
             src="/warzywa8.png"
             alt="Świeże warzywa w stylu komiksu"
@@ -87,7 +87,7 @@ export default function GemuseSection() {
             height={900}
             priority={false}
             quality={100}
-            className="h-[16vh] w-auto object-contain md:h-[30vh]"
+            className="h-[16vh] w-auto object-contain lg:h-[30vh]"
           />
         </div>
       </div>

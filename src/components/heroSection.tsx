@@ -27,11 +27,11 @@ export default function HeroSection() {
         width={1016}
         height={848}
         priority
-        className="absolute bottom-0 right-15 z-[2] hidden h-auto w-[70vw] min-w-[520px] max-w-[1040px] object-contain sm:block"
+        className="absolute bottom-0 right-15 z-[2] hidden h-auto w-[70vw] min-w-[520px] max-w-[1040px] object-contain lg:block"
       />
       {/* Napis CUZI / KEBAB + podtytuł — wyśrodkowany pod mobile */}
       <div
-        className="absolute left-0 top-1/2 z-[10] m-0 w-full -translate-y-1/2 p-0 text-center sm:left-40 sm:w-auto sm:rotate-[-5deg] sm:text-left"
+        className="absolute left-0 top-1/2 z-[10] m-0 w-full -translate-y-1/2 p-0 text-center lg:left-40 lg:w-auto lg:rotate-[-5deg] lg:text-left"
       >
         <h1 className="m-0 p-0 font-[FontMain] leading-none">
           {/* Warstwa spodnia: sam obrys (outside) */}
@@ -51,26 +51,26 @@ export default function HeroSection() {
         </h1>
 
         {/* Podtytuł */}
-        <h2 className="relative m-0 mt-4 p-0 font-[FontMain] leading-none sm:mt-6">
+        <h2 className="relative m-0 mt-7 p-0 font-[FontMain] leading-none sm:mt-8">
           {/* Warstwa spodnia: obrys */}
           <span
             aria-hidden="true"
             className="hero-outline-sub absolute inset-0"
           >
-            <span className="block text-[24px] leading-none sm:text-[44px]">
+            <span className="block text-[28px] leading-none sm:text-[52px]">
               kazdy pytal,
             </span>
-            <span className="block text-[24px] leading-none sm:text-[44px]">
+            <span className="block text-[28px] leading-none sm:text-[52px]">
               kazdy <span className="text-[#FFD300]">potrzebowal</span>
             </span>
           </span>
 
           {/* Warstwa wierzchnia: wypełnienie */}
           <span className="relative block">
-            <span className="block text-[24px] leading-none text-white sm:text-[44px]">
+            <span className="block text-[28px] leading-none text-white sm:text-[52px]">
               kazdy pytal,
             </span>
-            <span className="block text-[24px] leading-none text-white sm:text-[44px]">
+            <span className="block text-[28px] leading-none text-white sm:text-[52px]">
               kazdy <span className="text-[#FFD300]">potrzebowal</span>
             </span>
           </span>
@@ -78,7 +78,7 @@ export default function HeroSection() {
 
         {/* Przycisk ZOBACZ MENU (równoległobok wg przycisk2.html) */}
         <div
-          className="mt-6 inline-block px-2 transition-transform duration-200 hover:scale-105 sm:mt-10 sm:px-3"
+          className="mt-10 inline-block px-2 transition-transform duration-200 hover:scale-105 sm:mt-14 sm:px-3"
           style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}
         >
           <a

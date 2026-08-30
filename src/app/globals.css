@@ -48,7 +48,7 @@ body {
 
 /* Podtytuł "kazdy pytal, kazdy potrzebowal" */
 .hero-outline-sub {
-  -webkit-text-stroke: 4px #000000;
+  -webkit-text-stroke: 6px #000000;
 }
 @media (min-width: 640px) {
   .hero-outline-sub {
@@ -60,7 +60,7 @@ body {
 .gemuse-clip {
   clip-path: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .gemuse-clip {
     clip-path: polygon(0 0, 100% 0, 62% 100%, 0 100%);
   }
