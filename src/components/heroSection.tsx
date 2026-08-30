@@ -81,8 +81,8 @@ export default function HeroSection() {
           className="mt-6 inline-block transition-transform duration-200 hover:scale-105 sm:mt-10"
           style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}
         >
-          <button
-            type="button"
+          <a
+            href="#menu"
             className="relative inline-block cursor-pointer rounded border-4 border-black bg-[#FFD300] px-8 py-3 outline-none sm:px-11 sm:py-4"
             style={{ transform: "skewX(-15deg)" }}
           >
@@ -92,7 +92,7 @@ export default function HeroSection() {
             >
               ZOBACZ MENU
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </section>
