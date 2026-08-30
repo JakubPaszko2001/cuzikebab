@@ -135,7 +135,7 @@ export default function ContactSection() {
         </div>
 
                 {/* Przycisk akcji — jak w HeroSection */}
-        <div className="mt-4 inline-block transition-transform duration-200 hover:scale-105" style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}>
+                <div className="mt-4 inline-block px-2 transition-transform duration-200 hover:scale-105" style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}>
                                         <a href="tel:+48796664366" className="relative inline-block cursor-pointer rounded border-4 border-black bg-[#FFD300] px-6 py-2 outline-none md:px-11 md:py-4" style={{ transform: "skewX(-15deg)" }}>
                       <span className="block text-3xl uppercase tracking-[2px] leading-none text-black md:text-[45px]" style={{ fontFamily: "var(--font-bangers)", transform: "skewX(15deg)" }}>SKONTAKTUJ SIE</span>
                     </a>
