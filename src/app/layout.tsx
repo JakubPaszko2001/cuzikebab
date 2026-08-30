@@ -132,7 +132,8 @@ const jsonLd = {
       description:
         "Cuzi Kebab to najlepszy gemüse kebab w Warszawie. Berliński kebab z grillowanymi warzywami, soczystym mięsem i autorskimi sosami, przy Alejach Jerozolimskich 87.",
       url: SITE_URL,
-      telephone: "+48 000 000 000",
+            telephone: "+48 796 664 366",
+      email: "Kontakt@cuzikebab.pl",
       priceRange: "$$",
       currency: "PLN",
       servesCuisine: ["Kebab", "Gemüse Kebab", "Berlin Kebab", "Kuchnia niemiecka"],
@@ -150,20 +151,24 @@ const jsonLd = {
         latitude: 52.2304,
         longitude: 21.0068,
       },
-      openingHoursSpecification: [
+            openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-          ],
-          opens: "10:00",
-          closes: "22:00",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          opens: "12:00",
+          closes: "00:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Friday", "Saturday"],
+          opens: "12:00",
+          closes: "01:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Sunday"],
+          opens: "12:00",
+          closes: "00:00",
         },
       ],
       hasMenu: `${SITE_URL}/#menu`,
@@ -175,13 +180,15 @@ const jsonLd = {
       name: "Cuzi Kebab – Gemüse Kebab Warszawa",
       description:
         "Kebab z grillowanymi warzywami (gemüse) w centrum Warszawy. Berliński kebab na Śródmieściu, blisko Dworca Centralnego i Pałacu Kultury.",
-      address: {
+            address: {
         "@type": "PostalAddress",
         streetAddress: "Al. Jerozolimskie 87",
         addressLocality: "Warszawa",
         postalCode: "02-001",
         addressCountry: "PL",
       },
+      telephone: "+48 796 664 366",
+      email: "Kontakt@cuzikebab.pl",
       areaServed: "Warszawa (Centrum, Śródmieście, Ochota)",
     },
     {
@@ -194,10 +201,10 @@ const jsonLd = {
           "@type": "MenuSection",
           name: "Gemüse Kebab (bułka)",
           hasMenuItem: [
-            {
+                        {
               "@type": "MenuItem",
               name: "Chicken Gemüse Kebab",
-              description: "Kebab z kurczakiem i grillowanymi warzywami w bułce.",
+              description: "Kebab z kurczakiem i grillowanymi warzywami w bułce. Możliwość mięsa mieszanego (+2 zł).",
               offers: [
                 { "@type": "Offer", name: "SMALL 140G", price: "34", priceCurrency: "PLN" },
                 { "@type": "Offer", name: "REGULAR 180G", price: "40", priceCurrency: "PLN" },
