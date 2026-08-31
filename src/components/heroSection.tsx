@@ -27,11 +27,11 @@ export default function HeroSection() {
         width={1016}
         height={848}
         priority
-        className="absolute bottom-0 right-15 z-[2] hidden h-auto w-[70vw] min-w-[520px] max-w-[1040px] object-contain 2xl:block"
+        className="absolute bottom-0 right-15 z-[2] hidden h-auto w-[58vw] min-w-[420px] max-w-[1000px] object-contain xl:block"
       />
       {/* Napis CUZI / KEBAB + podtytuł — wyśrodkowany pod mobile */}
       <div
-        className="absolute left-0 top-1/2 z-[10] m-0 w-full -translate-y-1/2 p-0 text-center lg:left-40 lg:w-auto lg:rotate-[-5deg] lg:text-left"
+        className="absolute left-0 top-1/2 z-[10] m-0 w-full -translate-y-1/2 p-0 text-center xl:left-40 xl:w-auto xl:rotate-[-5deg] xl:text-left"
       >
         <h1 className="m-0 p-0 font-[FontMain] leading-none">
           {/* Warstwa spodnia: sam obrys (outside) */}
