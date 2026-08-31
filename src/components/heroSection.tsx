@@ -39,14 +39,14 @@ export default function HeroSection() {
             aria-hidden="true"
             className="hero-outline-big absolute inset-0"
           >
-            <span className="block text-[100px] leading-none sm:text-[100px] xl:text-[115px] 2xl:text-[130px]">CUZI</span>
-            <span className="block text-[100px] leading-none sm:text-[100px] xl:text-[115px] 2xl:text-[130px]">KEBAB</span>
+            <span className="block text-[100px] leading-none sm:text-[130px] xl:text-[155px] 2xl:text-[180px]">CUZI</span>
+            <span className="block text-[100px] leading-none sm:text-[130px] xl:text-[155px] 2xl:text-[180px]">KEBAB</span>
           </span>
 
           {/* Warstwa wierzchnia: wypełnienie */}
           <span className="relative block">
-            <span className="block text-[100px] leading-none text-white sm:text-[100px] xl:text-[115px] 2xl:text-[130px]">CUZI</span>
-            <span className="block text-[100px] leading-none text-[#FFD300] sm:text-[100px] xl:text-[115px] 2xl:text-[130px]">KEBAB</span>
+            <span className="block text-[100px] leading-none text-white sm:text-[130px] xl:text-[155px] 2xl:text-[180px]">CUZI</span>
+            <span className="block text-[100px] leading-none text-[#FFD300] sm:text-[130px] xl:text-[155px] 2xl:text-[180px]">KEBAB</span>
           </span>
         </h1>
 
