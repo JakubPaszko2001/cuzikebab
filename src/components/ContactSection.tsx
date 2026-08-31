@@ -18,7 +18,7 @@ export default function ContactSection() {
             <div className="relative z-[2] flex h-full w-full flex-col justify-center overflow-y-auto px-6 md:h-auto md:overflow-visible md:px-0 md:w-[55vw]">
         {/* Tytuł KONTAKT */}
                                 <h2
-          className="font-[FontMain] uppercase tracking-[2px] text-[#FFD300] text-8xl sm:text-9xl md:text-[12vw] leading-[0.85] mb-[2vh] md:mb-[4vh]"
+                                className="font-[FontMain] uppercase tracking-[2px] text-[#FFD300] text-8xl sm:text-9xl md:text-[12vw] leading-[0.85] mb-[2vh] md:mb-[4vh]"
                     style={{
             transform: "rotate(-3deg) skewX(-5deg)",
           }}

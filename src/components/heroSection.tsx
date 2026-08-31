@@ -39,14 +39,14 @@ export default function HeroSection() {
             aria-hidden="true"
             className="hero-outline-big absolute inset-0"
           >
-            <span className="block text-[100px] leading-none sm:text-[200px]">CUZI</span>
-            <span className="block text-[100px] leading-none sm:text-[200px]">KEBAB</span>
+            <span className="block text-[100px] leading-none sm:text-[100px] xl:text-[115px] 2xl:text-[130px]">CUZI</span>
+            <span className="block text-[100px] leading-none sm:text-[100px] xl:text-[115px] 2xl:text-[130px]">KEBAB</span>
           </span>
 
           {/* Warstwa wierzchnia: wypełnienie */}
           <span className="relative block">
-            <span className="block text-[100px] leading-none text-white sm:text-[200px]">CUZI</span>
-            <span className="block text-[100px] leading-none text-[#FFD300] sm:text-[200px]">KEBAB</span>
+            <span className="block text-[100px] leading-none text-white sm:text-[100px] xl:text-[115px] 2xl:text-[130px]">CUZI</span>
+            <span className="block text-[100px] leading-none text-[#FFD300] sm:text-[100px] xl:text-[115px] 2xl:text-[130px]">KEBAB</span>
           </span>
         </h1>
 
@@ -57,20 +57,20 @@ export default function HeroSection() {
             aria-hidden="true"
             className="hero-outline-sub absolute inset-0"
           >
-            <span className="block text-[28px] leading-none sm:text-[52px]">
+            <span className="block text-[28px] leading-none sm:text-[34px] xl:text-[42px] 2xl:text-[48px]">
               kazdy pytal,
             </span>
-            <span className="block text-[28px] leading-none sm:text-[52px]">
+            <span className="block text-[28px] leading-none sm:text-[34px] xl:text-[42px] 2xl:text-[48px]">
               kazdy <span className="text-[#FFD300]">potrzebowal</span>
             </span>
           </span>
 
           {/* Warstwa wierzchnia: wypełnienie */}
           <span className="relative block">
-            <span className="block text-[28px] leading-none text-white sm:text-[52px]">
+            <span className="block text-[28px] leading-none text-white sm:text-[34px] xl:text-[42px] 2xl:text-[48px]">
               kazdy pytal,
             </span>
-            <span className="block text-[28px] leading-none text-white sm:text-[52px]">
+            <span className="block text-[28px] leading-none text-white sm:text-[34px] xl:text-[42px] 2xl:text-[48px]">
               kazdy <span className="text-[#FFD300]">potrzebowal</span>
             </span>
           </span>
