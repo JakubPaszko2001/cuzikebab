@@ -116,16 +116,17 @@ export default function MenuSection() {
               {/* Margines górny chroniący tytuł */}
               <div className="relative z-[1] mt-9 flex h-20 items-center justify-center">
                 <h2
-                  className="text-center uppercase leading-[0.95] tracking-[1px] text-black"
+                  className="text-center uppercase leading-tight tracking-[1px] text-black"
                   style={{ fontFamily: "var(--font-bangers), cursive", fontSize: "2.1rem" }}
                 >
-                  {card.title1}
-                  {card.title2 && (
-                    <>
-                      <br />
-                      {card.title2}
-                    </>
-                  )}
+                  <span className="block">
+                    {card.title1}
+                    {card.title2 && (
+                      <>
+                        <span className="block">{card.title2}</span>
+                      </>
+                    )}
+                  </span>
                   {card.subTag && (
                     <span style={{ color: "#487328", fontSize: "1.3rem" }}> {card.subTag}</span>
                   )}

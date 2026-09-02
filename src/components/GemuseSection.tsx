@@ -4,7 +4,7 @@ export default function GemuseSection() {
   return (
     <section
       id="o-nas"
-      className="relative flex h-[70vh] lg:h-[34vh] w-full items-stretch overflow-hidden border-y-6 border-black bg-amber-400"
+      className="relative flex h-[100vh] lg:h-[34vh] w-full items-stretch overflow-hidden border-y-6 border-black bg-amber-400"
     >
       <div className="relative z-[10] flex h-full w-full flex-col lg:flex-row">
         <div className="relative h-full overflow-hidden lg:w-[55%]">
@@ -36,7 +36,7 @@ export default function GemuseSection() {
             />
           </svg>
 
-          <div className="relative z-[10] flex h-full flex-col justify-center gap-3 border-b-4 border-black px-8 py-6 lg:border-b-0 lg:px-20">
+          <div className="relative z-[10] flex h-full flex-col justify-center items-center text-center gap-3 border-b-4 border-black px-8 py-6 lg:items-start lg:border-b-0 lg:text-left lg:px-20">
             <h2
               className="relative [font-family:var(--font-titan)] text-4xl uppercase leading-none -rotate-2 sm:text-5xl lg:text-6xl"
               style={{ filter: "drop-shadow(4px 4px 0 #000000)" }}
