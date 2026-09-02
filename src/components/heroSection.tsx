@@ -33,7 +33,7 @@ export default function HeroSection() {
       <div
         className="absolute left-0 top-1/2 z-[10] m-0 w-full -translate-y-1/2 p-0 text-center xl:left-40 xl:w-auto xl:rotate-[-5deg] xl:text-left"
       >
-        <h1 className="m-0 p-0 font-[FontMain] leading-none">
+        <h1 className="m-0 p-0 [font-family:var(--font-titan)] leading-none">
           {/* Warstwa spodnia: sam obrys (outside) */}
           <span
             aria-hidden="true"
@@ -51,27 +51,27 @@ export default function HeroSection() {
         </h1>
 
         {/* Podtytuł */}
-        <h2 className="relative m-0 mt-7 p-0 font-[FontMain] leading-none sm:mt-8">
+        <h2 className="relative m-0 mt-7 p-0 [font-family:var(--font-titan)] leading-none sm:mt-8">
           {/* Warstwa spodnia: obrys */}
           <span
             aria-hidden="true"
             className="hero-outline-sub absolute inset-0"
           >
             <span className="block text-[28px] leading-none sm:text-[34px] xl:text-[42px] 2xl:text-[48px]">
-              kazdy pytal,
+              każdy pytał,
             </span>
             <span className="block text-[28px] leading-none sm:text-[34px] xl:text-[42px] 2xl:text-[48px]">
-              kazdy <span className="text-[#FFD300]">potrzebowal</span>
+              każdy <span className="text-[#FFD300]">potrzebował</span>
             </span>
           </span>
 
           {/* Warstwa wierzchnia: wypełnienie */}
           <span className="relative block">
             <span className="block text-[28px] leading-none text-white sm:text-[34px] xl:text-[42px] 2xl:text-[48px]">
-              kazdy pytal,
+              każdy pytał,
             </span>
             <span className="block text-[28px] leading-none text-white sm:text-[34px] xl:text-[42px] 2xl:text-[48px]">
-              kazdy <span className="text-[#FFD300]">potrzebowal</span>
+              każdy <span className="text-[#FFD300]">potrzebował</span>
             </span>
           </span>
         </h2>

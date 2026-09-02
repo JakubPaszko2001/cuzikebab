@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const links = [
-  { label: "Strona Glowna", href: "#strona-glowna" },
+  { label: "Strona Główna", href: "#strona-glowna" },
   { label: "O Nas", href: "#o-nas" },
   { label: "Menu", href: "#menu" },
   { label: "Kontakt", href: "#kontakt" },
@@ -58,7 +58,7 @@ export default function Navbar() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="relative inline-block rounded border-2 border-black bg-[#FFD300] px-4 py-1 font-[FontMain] text-xl uppercase tracking-wide text-black transition-transform duration-150 hover:scale-105"
+                  className="relative inline-block rounded border-2 border-black bg-[#FFD300] px-4 py-1 [font-family:var(--font-titan)] text-xl uppercase tracking-wide text-black transition-transform duration-150 hover:scale-105"
                 >
                   {link.label}
                 </a>
@@ -97,7 +97,7 @@ export default function Navbar() {
             key={link.label}
             href={link.href}
             onClick={closeMenu}
-            className="inline-block rounded border-2 border-black bg-[#FFD300] px-8 py-3 text-center font-[FontMain] text-3xl uppercase tracking-wide text-black transition-transform duration-150 hover:scale-105"
+            className="inline-block rounded border-2 border-black bg-[#FFD300] px-8 py-3 text-center [font-family:var(--font-titan)] text-3xl uppercase tracking-wide text-black transition-transform duration-150 hover:scale-105"
           >
             {link.label}
           </a>

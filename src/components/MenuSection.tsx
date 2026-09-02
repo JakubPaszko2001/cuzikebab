@@ -76,7 +76,7 @@ export default function MenuSection() {
       {/* Nagłówek sekcji — zaczyna się tam, gdzie zaczyna się menu (lewa krawędź kart) */}
       <div className="relative z-[5] mb-10 mt-8 w-full max-w-[1100px]">
         <h2
-          className="relative font-[FontMain] uppercase italic text-[#FFD300] text-8xl sm:text-9xl md:text-[10rem]"
+          className="relative [font-family:var(--font-titan)] uppercase italic text-[#FFD300] text-8xl sm:text-9xl md:text-[10rem]"
           style={{
             transform: "rotate(-1.5deg)",
             transformOrigin: "left center",

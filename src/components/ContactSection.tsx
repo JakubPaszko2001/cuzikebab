@@ -18,7 +18,7 @@ export default function ContactSection() {
             <div className="relative z-[2] flex h-full w-full flex-col justify-center overflow-y-auto px-6 md:h-auto md:overflow-visible md:px-0 md:w-[55vw]">
         {/* Tytuł KONTAKT */}
                                 <h2
-                                className="font-[FontMain] uppercase tracking-[2px] text-[#FFD300] text-8xl sm:text-9xl md:text-[12vw] leading-[0.85] mb-[2vh] md:mb-[4vh]"
+                                className="[font-family:var(--font-titan)] uppercase tracking-[2px] text-[#FFD300] text-8xl sm:text-9xl md:text-[8vw] leading-[0.85] mb-[2vh] md:mb-[4vh]"
                     style={{
             transform: "rotate(-3deg) skewX(-5deg)",
           }}
@@ -47,7 +47,7 @@ export default function ContactSection() {
               </div>
             </div>
             <div>
-              <h4 className="font-[FontMain] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">ZADZWON:</h4>
+              <h4 className="[font-family:var(--font-titan)] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">ZADZWON:</h4>
               <a href="tel:+48796664366" className="block text-sm font-bold leading-[1.2] text-white no-underline [text-shadow:1px_1px_2px_#000000] md:text-[2.1vw] xl:text-[1.2vw]">+48 796 664 366</a>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function ContactSection() {
               </div>
             </div>
             <div>
-              <h4 className="font-[FontMain] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">NAPISZ DO NAS:</h4>
+              <h4 className="[font-family:var(--font-titan)] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">NAPISZ DO NAS:</h4>
               <a href="mailto:Kontakt@cuzikebab.pl" className="block text-sm font-bold leading-[1.2] text-white no-underline [text-shadow:1px_1px_2px_#000000] md:text-[2.1vw] xl:text-[1.2vw]">Kontakt@cuzikebab.pl</a>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function ContactSection() {
               </div>
             </div>
             <div>
-              <h4 className="font-[FontMain] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">ADRES:</h4>
+              <h4 className="[font-family:var(--font-titan)] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">ADRES:</h4>
               <p className="block text-sm font-bold leading-[1.2] text-white no-underline pt-[0.5vh] [text-shadow:1px_1px_2px_#000000] md:text-[2.1vw] xl:text-[1.2vw]">Aleje Jerozolimskie 87<br /><span className="mt-[0.5vh] block">02-001 Warszawa</span></p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function ContactSection() {
               </div>
             </div>
                             <div>
-                              <h4 className="font-[FontMain] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">OBSERWUJ NAS:</h4>
+                              <h4 className="[font-family:var(--font-titan)] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">OBSERWUJ NAS:</h4>
                               <div className="flex flex-col items-start">
                               <a href="https://www.instagram.com/cuzikebab/" target="_blank" rel="noopener noreferrer" className="mt-[0.5vh] inline-flex items-center gap-[0.5vw] text-[14px] font-bold text-white no-underline md:text-[2vw] xl:text-[1.1vw]">
                                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-[1.2em] w-[1.2em] shrink-0 text-[#FFD300]">
@@ -128,7 +128,7 @@ export default function ContactSection() {
               </div>
             </div>
             <div>
-              <h4 className="font-[FontMain] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">GODZINY OTWARCIA:</h4>
+              <h4 className="[font-family:var(--font-titan)] text-[#FFD300] uppercase text-xl leading-none tracking-wide md:text-[3.4vw] xl:text-[2vw] [text-shadow:2px_2px_0_#000000]">GODZINY OTWARCIA:</h4>
               <p className="block text-sm font-bold leading-[1.2] text-white no-underline [text-shadow:1px_1px_2px_#000000] md:text-[2.1vw] xl:text-[1.2vw]">Pon-Czw: 12:00-00:00<br />Pt-Sb: 12:00-01:00 <br />Ndz: 12:00-24:00</p>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function ContactSection() {
                 {/* Przycisk akcji — jak w HeroSection */}
                 <div className="mt-4 inline-block px-2 transition-transform duration-200 hover:scale-105" style={{ filter: "drop-shadow(6px 8px 0px #000000)" }}>
                                         <a href="tel:+48796664366" className="relative inline-block cursor-pointer rounded border-4 border-black bg-[#FFD300] px-6 py-2 outline-none md:px-11 md:py-4" style={{ transform: "skewX(-15deg)" }}>
-                      <span className="block text-3xl uppercase tracking-[2px] leading-none text-black md:text-[45px]" style={{ fontFamily: "var(--font-bangers)", transform: "skewX(15deg)" }}>SKONTAKTUJ SIE</span>
+                      <span className="block text-3xl uppercase tracking-[2px] leading-none text-black md:text-[45px]" style={{ fontFamily: "var(--font-bangers)", transform: "skewX(15deg)" }}>SKONTAKTUJ SIĘ</span>
                     </a>
         </div>
       </div>
